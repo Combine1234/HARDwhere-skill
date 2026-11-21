@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-labelledby="title desc">
+  <title id="title">HARDwhere</title>
+  <desc id="desc">HARDwhere wordmark beside a microcontroller circuit in mint green and copper.</desc>
+  <defs>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#152722"/>
+      <stop offset="1" stop-color="#0a1714"/>
+    </linearGradient>
+    <pattern id="holes" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#638776" opacity=".22"/>
+    </pattern>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="289" rx="28" fill="url(#board)" stroke="#364f43"/>
+  <rect x="24" y="24" width="1152" height="242" rx="14" fill="url(#holes)" stroke="#294339"/>
+  <g fill="#111e1a" stroke="#557565" stroke-width="2">
+    <circle cx="48" cy="48" r="7"/>
+    <circle cx="1152" cy="48" r="7"/>
+    <circle cx="48" cy="242" r="7"/>
+    <circle cx="1152" cy="242" r="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 108h28l12 12h25m-65 0h19l12 12h34m-65 38h19l12-12h34m-65 24h28l12-12h25" stroke="#517f6b" stroke-width="2"/>
+    <path d="M243 120h34l18-18h30m-82 30h45l18-18h161m-224 44h45l18 18h160m-223-6h34l18 18h41" stroke="#456d5c" stroke-width="2"/>
+    <path d="M744 64h113l38 38h143l24-24h60M769 227h180l31-31h110l25-25h30m-117-27h56l23-23h38" stroke="#456d5c" stroke-width="2"/>
+    <path d="M942 64h91l19-19h54M968 228h32l20 17h95" stroke="#896948" stroke-width="2"/>
+  </g>
+  <g fill="#e1ad74">
+    <circle cx="60" cy="108" r="3"/><circle cx="60" cy="182" r="3"/>
+    <circle cx="325" cy="102" r="3"/><circle cx="336" cy="188" r="3"/>
+    <circle cx="1122" cy="78" r="3"/><circle cx="1145" cy="121" r="3"/>
+    <circle cx="1145" cy="171" r="3"/><circle cx="1115" cy="245" r="3"/>
+  </g>
+  <g>
+    <rect x="122" y="88" width="126" height="114" rx="18" fill="#13221e" stroke="#77b39b" stroke-width="2"/>
+    <rect x="137" y="103" width="96" height="84" rx="9" fill="#284b3e"/>
+    <path d="M155 123v43m0-21h23m-7-12v24m10-12h28m-14-20v40m14-40v40" fill="none" stroke="#a3e4c8" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#d6a573">
+      <rect x="145" y="79" width="8" height="14" rx="2"/><rect x="169" y="79" width="8" height="14" rx="2"/>
+      <rect x="193" y="79" width="8" height="14" rx="2"/><rect x="217" y="79" width="8" height="14" rx="2"/>
+      <rect x="145" y="197" width="8" height="14" rx="2"/><rect x="169" y="197" width="8" height="14" rx="2"/>
+      <rect x="193" y="197" width="8" height="14" rx="2"/><rect x="217" y="197" width="8" height="14" rx="2"/>
+    </g>
+  </g>
+  <rect x="352" y="72" width="579" height="147" rx="12" fill="#11231e" opacity=".94"/>
+  <text x="380" y="151" fill="#f1f6ed" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="700" letter-spacing="-4">HARD<tspan fill="#9bdbbf">where</tspan></text>
+  <text x="386" y="192" fill="#b9cdbf" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="3">EMBEDDED AGENT SKILL + CLI</text>
+</svg>

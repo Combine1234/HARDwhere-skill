@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hardwhere"
+version = "0.1.0"
+description = "Hardware discovery and vendor tool workflows for embedded agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["pyserial>=3.5,<4"]
+
+[project.optional-dependencies]
+teensy = ["hidapi>=0.14,<1"]
+
+[project.scripts]
+hardwhere = "hardwhere.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

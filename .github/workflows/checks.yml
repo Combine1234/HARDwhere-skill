@@ -1,0 +1,68 @@
+
+name: Checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fixtures:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ['3.10', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install .
+      - run: python -m unittest discover -s tests -v
+      - run: python -m py_compile examples/pi-lan/probe.py
+      - run: hardwhere discover --json
+
+  vendor-build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - board: arduino-uno-r3
+            core: '1.8.8'
+            sketch: examples/serial-smoke/serial_smoke
+          - board: teensy-4-1
+            core: '1.62.0'
+            sketch: examples/serial-smoke/serial_smoke
+          - board: esp32-devkitc-v4
+            core: '4.0.0'
+            sketch: examples/esp32-bme280/bme280
+            library: Adafruit BME280 Library@2.3.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: arduino/setup-arduino-cli@v2
+        with:
+          version: '1.3.1'
+      - run: python -m pip install .
+      - name: Install vendor core
+        run: hardwhere install --board "$HW_BOARD" --version "$HW_CORE" --apply --json
+        env:
+          HW_BOARD: ${{ matrix.board }}
+          HW_CORE: ${{ matrix.core }}
+      - name: Install example library
+        if: matrix.library
+        run: hardwhere install --board "$HW_BOARD" --library "$HW_LIBRARY" --apply --json
+        env:
+          HW_BOARD: ${{ matrix.board }}
+          HW_LIBRARY: ${{ matrix.library }}
+      - name: Compile without a board
+        run: hardwhere build --board "$HW_BOARD" --sketch "$HW_SKETCH" --output build/ci --json
+        env:
+          HW_BOARD: ${{ matrix.board }}
+          HW_SKETCH: ${{ matrix.sketch }}

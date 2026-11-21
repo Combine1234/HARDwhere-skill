@@ -1,0 +1,36 @@
+{
+  "wires": [
+    {
+      "from": ["ESP32-DevKitC V4", "3V3"],
+      "to": ["Adafruit BME280", "VIN"],
+      "signal": "Power",
+      "voltage_v": 3.3,
+      "max_voltage_v": 5,
+      "source": "Espressif ESP32-DevKitC V4 I/O Connector and Adafruit BME280 I2C Wiring"
+    },
+    {
+      "from": ["ESP32-DevKitC V4", "GND"],
+      "to": ["Adafruit BME280", "GND"],
+      "signal": "Ground",
+      "voltage_v": 0,
+      "max_voltage_v": 0,
+      "source": "Espressif ESP32-DevKitC V4 I/O Connector and Adafruit BME280 I2C Wiring"
+    },
+    {
+      "from": ["ESP32-DevKitC V4", "IO21 (GPIO21)"],
+      "to": ["Adafruit BME280", "SDI (SDA)"],
+      "signal": "SDA",
+      "voltage_v": 3.3,
+      "max_voltage_v": 3.3,
+      "source": "Espressif ESP32-DevKitC V4 I/O Connector and Adafruit BME280 I2C Wiring"
+    },
+    {
+      "from": ["ESP32-DevKitC V4", "IO22 (GPIO22)"],
+      "to": ["Adafruit BME280", "SCK (SCL)"],
+      "signal": "SCL",
+      "voltage_v": 3.3,
+      "max_voltage_v": 3.3,
+      "source": "Espressif ESP32-DevKitC V4 I/O Connector and Adafruit BME280 I2C Wiring"
+    }
+  ]
+}
