@@ -228,7 +228,7 @@ class SSHTest(unittest.TestCase):
             skills = Path(directory) / "skills"
             result = ssh.onboard("bench-pi", skills_dir=skills)
             path = Path(result["skill"])
-            self.assertEqual(path.parent.parent, skills)
+            self.assertEqual(path.parent.parent, skills.resolve())
             self.assertIn("bench-pi", path.read_text(encoding="utf-8"))
             self.assertNotIn("Rev 1.5", path.read_text(encoding="utf-8"))
             with self.assertRaisesRegex(OSError, "exist"):

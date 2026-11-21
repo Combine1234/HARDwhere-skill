@@ -3,6 +3,12 @@
 </h1>
 
 <p align="center">
+  <img src="docs/assets/robotarn-credit.svg" alt="RoboTarn team logo" width="180">
+  <br>
+  Developed by <a href="https://github.com/Combine1234">@Combine1234</a> with the RoboTarn team.
+</p>
+
+<p align="center">
   Give your agent the workflow to choose parts, wire a circuit, flash firmware, and verify what runs.
 </p>
 
@@ -13,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="#quickstart">Quickstart</a> · <a href="#examples">Examples</a> · <a href="#board-coverage-and-evidence">Board support</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="README.th.md">ภาษาไทย</a>
+  <a href="#quickstart">Quickstart</a> · <a href="#examples">Examples</a> · <a href="#board-coverage-and-evidence">Board support</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="docs/references.md">References &amp; roadmap</a> · <a href="README.th.md">ภาษาไทย</a>
 </p>
 
 HARDwhere pairs a shell-enabled agent skill with a Python CLI for embedded work. The skill reads manufacturer documentation, explains design choices, and plans the next bench check. The CLI discovers local devices, calls vendor tools, and gives the agent structured results.
@@ -83,9 +89,9 @@ The CLI has four reference profiles. The skill can help research and document ot
 
 | Board | Workflow | Build evidence | Physical bench |
 | :--- | :--- | :--- | :--- |
-| Arduino UNO R3 | Arduino AVR build, upload, serial | Windows · AVR core 1.8.8 | Awaiting report |
-| ESP32-DevKitC V4 · WROOM-32 + CP210x | Arduino ESP32 build, upload, serial. CP210x driver workflow on Windows | Windows · ESP32 core 4.0.0, Adafruit BME280 2.3.0 | Awaiting report |
-| Teensy 4.1 | Teensyduino build, HalfKay upload, USB serial | Windows · Teensyduino 1.62.0 | Awaiting report |
+| Arduino UNO R3 | Arduino AVR build, upload, serial | Windows and Linux · AVR core 1.8.8 | Awaiting report |
+| ESP32-DevKitC V4 · WROOM-32 + CP210x | Arduino ESP32 build, upload, serial. CP210x driver workflow on Windows | Windows and Linux · ESP32 core 4.0.0, Adafruit BME280 2.3.0 | Awaiting report |
+| Teensy 4.1 | Teensyduino build, HalfKay upload, USB serial | Windows and Linux · Teensyduino 1.62.0 | Awaiting report |
 | Raspberry Pi 4 Model B · Linux | OpenSSH setup, model probe, Python smoke test | Python syntax checked | Awaiting report |
 
 [GitHub Actions](.github/workflows/checks.yml) defines fixture tests for Windows, macOS, and Linux and compile-only jobs for the three microcontroller examples. See [how to record a bench run](CONTRIBUTING.md#record-a-bench-run) for live results.
@@ -94,4 +100,4 @@ The CLI has four reference profiles. The skill can help research and document ot
 
 Try an example, [report a bench run](.github/ISSUE_TEMPLATE/bench-report.md), or [add a board](CONTRIBUTING.md#add-a-board). A report that includes the exact revision, tool versions, and a short result lets others reproduce the work.
 
-HARDwhere is released under the [MIT License](LICENSE).
+HARDwhere code uses the [MIT License](LICENSE). RoboTarn retains the rights to its [logo](docs/assets/ROBOTARN-NOTICE.md).
